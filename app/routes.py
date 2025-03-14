@@ -1,0 +1,10 @@
+#The different routes for the application
+
+#imports
+from flask import Blueprint, render_template
+
+main = Blueprint("main", __name__)
+
+@main.route("/")
+def hello_world():
+    return render_template("auth/login.html")
