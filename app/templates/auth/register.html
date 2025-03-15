@@ -16,16 +16,26 @@
     
     <div class="login-container">
         <form action="#" method="POST">
+            {{ form.hidden_tag() }}
+
+            <label for="username">Username</label>
+            {{ form.username(class="input-field", placeholder="Enter your email address") }}
+
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address">
+            {{ form.email(class="input-field", placeholder="Enter your email address") }}
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter a password">
+            {{ form.password(class="input-field", placeholder="Enter a password") }}
+
+            <label for="confirm_password">Confirm Password</label>
+            {{ form.confirm_password(class="input-field", placeholder="Confirm your password") }}
 
             <button type="submit">Register</button>
         </form>
 
-        <a href="#">Forgot password?</a> <!-- Forgot password link -->
+        <div class="inline-text">
+            <p>Already have an account? <a href="#">Log in</a></p>  <!-- Forgot password link -->
+        </div>
 
     </div>
 </body>
