@@ -5,6 +5,7 @@ from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 
+#initialize the database 
 db = SQLAlchemy()
 
 #Factory method to instantiate the application
