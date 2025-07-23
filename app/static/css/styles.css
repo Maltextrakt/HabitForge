@@ -42,11 +42,12 @@ button {
 
 /* Style the forgot password link */
 a {
-    display: block;
+    /*display: block;*/
     margin-top: 10px;
     text-decoration: none;
     font-style: italic;
     color: blue;
-    font-size: 12px;
+    font-size: 14px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
