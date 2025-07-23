@@ -1,2 +1,14 @@
-<h1>Dashboard page
-</h1>
+<!DOCTYPE html>
+
+<html lang="eng">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - HabitForge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<header>
+    <h1>Welcome, {{ current_user.username }}!</h1>
+</header>

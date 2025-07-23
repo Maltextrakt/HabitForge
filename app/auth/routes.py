@@ -5,6 +5,7 @@ from flask import Blueprint, render_template, redirect, url_for, flash
 from app.models import User
 from app.auth.forms import RegistrationForm, LoginForm
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_user
 
 auth = Blueprint("auth", __name__)
 
@@ -16,6 +17,7 @@ def login():
         password = form.password.data
         user = User.query.filter_by(email=email).first()
         if user and check_password_hash(user.password_hash, password):
+            login_user(user)
             flash("Login succesful!", "success")
             return redirect(url_for("dashboard.user_dashboard"))
         else:
@@ -25,6 +27,8 @@ def login():
 
     print("Error, could not log in")
     return render_template("auth/login.html", form=form)
+
+
 
 @auth.route("/register", methods=["GET", "POST"])
 def register():
