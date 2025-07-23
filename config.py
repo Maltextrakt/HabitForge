@@ -1,4 +1,4 @@
-# Configuration for the app
+# Configuration for the app, secret key
 
 #imports
 from flask import Flask
